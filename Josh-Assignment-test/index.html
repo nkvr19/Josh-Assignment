@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <header>
+        <div class="header-title">JTGeats</div>
+        <div class="header-links">
+            <ul class="header-mid">
+                <li class="header-mid-li">Home</li>
+                <li class="header-mid-li">About</li>
+                <li class="header-mid-li">Menu</li>
+                <li class="header-mid-li">Blog</li>
+                <li class="header-mid-li">Content</li>
+            </ul>
+        </div>
+        <div class="header-options">
+            <img class="header-options-icon" src="./Assets/Icons/Search.svg" alt="">
+            <button id="cart" onclick="cartopen()"><img class="header-options-icon" src="./Assets/Icons/Cart.svg" alt=""></button>
+        </div>        
+    </header>
+    <div id="request-modal-window">
+        <div class="request-modal-content">
+            <h1>Request a Dish</h1>
+            <label for="request-modal-content-one">Name*</label> 
+            <input id="request-modal-content-one" class="request-modal-inputs" type="text" placeholder="  Enter name of the dish">
+            <label for="request-modal-content-two">Upload an image</label>
+            <input id="request-modal-content-two" class="request-modal-inputs" type="text" placeholder="  Paste a URL">
+            <div>
+                <button onclick="requestclose()" id="request-modal-cancel">Cancel</button>
+                <button onclick="requestclose()" class="popular-request">Submit Request</button>
+            </div>
+        </div>
+    </div>
+    <div id="cart-modal-window">
+        <div id="cart-modal-content">
+            <img class="cart-image" src="./Assets/Icons/Cart.svg" alt="">
+            <h1>Cart is Empty</h1>
+            <p>Add some items to the cart to checkout</p>
+            <button id="close-cart" onclick="menuclose()" class="popular-request">Back to Menu</button>
+        </div>
+    </div>
+    <section class="head-section">
+        <div class="head-section-content">
+            <div class="head-section-title-content">
+                <div class="head-section-title">
+                    <h3>
+                        Authentic Home Food In India
+                    </h3>
+                </div>
+                <div class="head-section-desc">
+                    <p>
+                        JTGeats is a courier service in which authentic home cook food is delivered to a customer.
+                    </p>
+                </div>
+                <div class="head-section-bottom-content">
+                    <div class="search-container">
+                        <input type="text" placeholder="   Search food you love" class="head-section-search">
+                        <button type="submit" class="head-section-searchbutton">Search</button>
+                    </div>
+                </div>
+            </div>
+            <div class="head-section-right">
+                <img class="head-section-cooking-image" src="./Assets/Icons/cooking.svg" alt="">
+            </div>
+        </div>
+    </section>
+    
+    <section class="home-kitchen">
+        <div class="home-kitchen-title">Home Kitchen</div>
+        <div class="home-kitchen-items">
+            <div class="item">
+                <img class="kitchen-images" src="./Assets/Images/unsplash_60nzTP7_hMQ.png" alt="">
+                <div class="item-desc">
+                    <div class="item-desc1">
+                        <span>Home Made</span><span>&#8377;190</span>
+                    </div>
+                    <div class="item-desc2">
+                        <span>
+                            <span><img src="./Assets/Icons/star.svg" alt=""><span>4.7</span></span>
+                        </span>
+                        <span><img height="10px" class="kitchen-plus" src="./Assets/Icons/plus.svg" alt=""></span>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img class="kitchen-images" src="./Assets/Images/pexels-mumma-oyens-8799602 1.png" alt="">
+                <div class="item-desc">
+                    <div class="item-desc1">
+                        <span>Home Made</span><span>&#8377;190</span>
+                    </div>
+                    <div class="item-desc2">
+                        <span>
+                            <span><img src="./Assets/Icons/star.svg" alt=""><span>4.7</span></span>
+                        </span>
+                        <span><img height="10px" class="kitchen-plus" src="./Assets/Icons/plus.svg" alt=""></span>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img class="kitchen-images" src="./Assets/Images/pexels-omar-mahmood-106343 1.png" alt="">
+                <div class="item-desc">
+                    <div class="item-desc1">
+                        <span>Home Made</span><span>&#8377;190</span>
+                    </div>
+                    <div class="item-desc2">
+                        <span>
+                            <span><img src="./Assets/Icons/star.svg" alt=""><span>4.7</span></span>
+                        </span>
+                        <span><img height="10px" class="kitchen-plus" src="./Assets/Icons/plus.svg" alt=""></span>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img class="kitchen-images" src="./Assets/Images/unsplash_33GPuoFI7v8.png" alt="">
+                <div class="item-desc">
+                    <div class="item-desc1">
+                        <span>Home Made</span><span>&#8377;190</span>
+                    </div>
+                    <div class="item-desc2">
+                        <span>
+                            <span><img src="./Assets/Icons/star.svg" alt=""><span>4.7</span></span>
+                        </span>
+                        <span><img height="10px" class="kitchen-plus" src="./Assets/Icons/plus.svg" alt=""></span>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img class="kitchen-images" src="./Assets/Images/unsplash_CbNAuxSZTFo.png" alt="">
+                <div class="item-desc">
+                    <div class="item-desc1">
+                        <span>Home Made</span><span>&#8377;190</span>
+                    </div>
+                    <div class="item-desc2">
+                        <span>
+                            <span><img src="./Assets/Icons/star.svg" alt=""><span>4.7</span></span>
+                        </span>
+                        <span><img height="10px" class="kitchen-plus" src="./Assets/Icons/plus.svg" alt=""></span>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img class="kitchen-images"src="./Assets/Images/unsplash_MqT0asuoIcU.png" alt="">
+                <div class="item-desc">
+                    <div class="item-desc1">
+                        <span>Home Made</span><span>&#8377;190</span>
+                    </div>
+                    <div class="item-desc2">
+                        <span>
+                            <span><img src="./Assets/Icons/star.svg" alt=""><span>4.7</span></span>
+                        </span>
+                        <span><img height="10px" class="kitchen-plus" src="./Assets/Icons/plus.svg" alt=""></span>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img class="kitchen-images" src="./Assets/Images/unsplash_nP11TkjxJ7s.png" alt="">
+                <div class="item-desc">
+                    <div class="item-desc1">
+                        <span>Home Made</span><span>&#8377;190</span>
+                    </div>
+                    <div class="item-desc2">
+                        <span>
+                            <span><img src="./Assets/Icons/star.svg" alt=""><span>4.7</span></span>
+                        </span>
+                        <span><img height="10px" class="kitchen-plus" src="./Assets/Icons/plus.svg" alt=""></span>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img class="kitchen-images" src="./Assets/Images/unsplash_sejqj6Eaqe8.png" alt="">
+                <div class="item-desc">
+                    <div class="item-desc1">
+                        <span>Home Made</span><span>&#8377;190</span>
+                    </div>
+                    <div class="item-desc2">
+                        <span>
+                            <span><img src="./Assets/Icons/star.svg" alt=""><span>4.7</span></span>
+                        </span>
+                        <span><img height="10px" class="kitchen-plus" src="./Assets/Icons/plus.svg" alt=""></span>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img class="kitchen-images"src="./Assets/Images/unsplash_UxRhrU8fPHQ.png" alt="">
+                <div class="item-desc">
+                    <div class="item-desc1">
+                        <span>Home Made</span><span>&#8377;190</span>
+                    </div>
+                    <div class="item-desc2">
+                        <span>
+                            <span><img src="./Assets/Icons/star.svg" alt=""><span>4.7</span></span>
+                        </span>
+                        <span><img height="10px" class="kitchen-plus" src="./Assets/Icons/plus.svg" alt=""></span>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img class="kitchen-images"src="./Assets/Images/unsplash_Y6OgisiGBjM.png" alt="">
+                <div class="item-desc">
+                    <div class="item-desc1">
+                        <span>Home Made</span><span>&#8377;190</span>
+                    </div>
+                    <div class="item-desc2">
+                        <span>
+                            <span><img src="./Assets/Icons/star.svg" alt=""><span>4.7</span></span>
+                        </span>
+                        <span><img height="10px" class="kitchen-plus" src="./Assets/Icons/plus.svg" alt=""></span>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img class="kitchen-images" src="./Assets/Images/unsplash_nP11TkjxJ7s.png" alt="">
+                <div class="item-desc">
+                    <div class="item-desc1">
+                        <span>Home Made</span><span>&#8377;190</span>
+                    </div>
+                    <div class="item-desc2">
+                        <span>
+                            <span><img src="./Assets/Icons/star.svg" alt=""><span>4.7</span></span>
+                        </span>
+                        <span><img height="10px" class="kitchen-plus" src="./Assets/Icons/plus.svg" alt=""></span>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img class="kitchen-images"src="./Assets/Images/unsplash_33GPuoFI7v8.png" alt="">
+                <div class="item-desc">
+                    <div class="item-desc1">
+                        <span>Home Made</span><span>&#8377;190</span>
+                    </div>
+                    <div class="item-desc2">
+                        <span>
+                            <span><img src="./Assets/Icons/star.svg" alt=""><span>4.7</span></span>
+                        </span>
+                        <span><img height="10px" class="kitchen-plus" src="./Assets/Icons/plus.svg" alt=""></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div><h1 class="popular-title">Popular Items</h1></div>
+        <div class="popular-contents">
+            <div>
+                <img class="popular-item-button1" src="./Assets/Icons/play.svg" alt="">
+            </div>
+            <div>
+                <img class="popular-items" src="./Assets/Images/unsplash_60nzTP7_hMQ.png" alt="">
+                <div class="item-desc">
+                    <div class="item-desc1">
+                        <span>Home Made</span><span>&#8377;190</span>
+                    </div>
+                    <div class="item-desc2">
+                        <span>
+                            <span><img src="./Assets/Icons/star.svg" alt=""><span>4.7</span></span>
+                        </span>
+                        <span><img height="10px" class="kitchen-plus" src="./Assets/Icons/plus.svg" alt=""></span>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img class="popular-items" src="./Assets/Images/unsplash_sejqj6Eaqe8.png" alt="">
+                <div class="item-desc">
+                    <div class="item-desc1">
+                        <span>Home Made</span><span>&#8377;190</span>
+                    </div>
+                    <div class="item-desc2">
+                        <span>
+                            <span><img src="./Assets/Icons/star.svg" alt=""><span>4.7</span></span>
+                        </span>
+                        <span><img height="10px" class="kitchen-plus" src="./Assets/Icons/plus.svg" alt=""></span>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img class="popular-items" src="./Assets/Images/unsplash_Y6OgisiGBjM.png" alt="">
+                <div class="item-desc">
+                    <div class="item-desc1">
+                        <span>Home Made</span><span>&#8377;190</span>
+                    </div>
+                    <div class="item-desc2">
+                        <span>
+                            <span><img src="./Assets/Icons/star.svg" alt=""><span>4.7</span></span>
+                        </span>
+                        <span><img height="10px" class="kitchen-plus" src="./Assets/Icons/plus.svg" alt=""></span>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img class="popular-item-button2" src="./Assets/Icons/play.svg" alt="">
+            </div>
+            
+        </div>
+        <div class="center"><button id="request-dish" onclick="requestopen()" class="popular-request">Request Dish</button></div>
+    </section>  
+    <section class="services-section">     
+        <div class="services">
+            <div class="center">
+                <div class="h1">
+                    <div class="head-title">We are providing best </div>
+                    <div class="head-title">home cooked food delivery services</div>
+                </div>
+            </div>
+            <div class="center-desc">
+                <div class="h1">
+                    <div class="desc">Away from home and craving the tasty homemade recipes?</div>
+                    <div class="desc">Choose from a selection of our delicious home cooked dishes</div>
+                </div>
+            </div>
+            <div class="service-video-design">
+                    <svg id="play-button"  class="service-play-button" width="138"  onclick="playvideo()" height="139" viewBox="0 0 138 139" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g filter="url(#filter0_d_227_80)">
+                        <circle cx="65.25" cy="64.5" r="48.75" fill="#1AC073"/>
+                        <path d="M82.265 60.9489C83.6296 62.144 83.6296 64.2673 82.265 65.4624L60.9222 84.1555C58.9827 85.8541 55.9456 84.4768 55.9456 81.8987L55.9456 44.5126C55.9456 41.9344 58.9827 40.5572 60.9222 42.2558L82.265 60.9489Z" fill="white"/>
+                    </g>
+                    <defs>
+                        <filter id="filter0_d_227_80" x="0.5" y="0.75" width="137.5" height="137.5" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                            <feOffset dx="4" dy="5"/>
+                            <feGaussianBlur stdDeviation="10"/>
+                            <feComposite in2="hardAlpha" operator="out"/>
+                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
+                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_227_80"/>
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_227_80" result="shape"/>
+                        </filter>
+                    </defs>
+                </svg>
+                
+                
+                <video id="video" class="service-video" preload="auto" loop>
+                    <source src="./Assets/vid.mp4">
+                </video>
+            </div>
+        </div>        
+    </section>
+    <section class="details-section">
+        <div>
+            <div class="details-section-content">
+                <div>Do you have a question</div>
+                <div>or want to become a seller?</div>
+                <div class="extra-desc">Fill this form and our manager will contact you next 48 hours. </div>
+            </div>
+            <div class="desc-form">
+                <div>
+                    <input class="details-section-details" type="text" placeholder="Your Name">
+                    <input class="details-section-details" type="text" placeholder="Your e-mail">
+                </div>
+                <div>
+                    <input type="text" class="details-section-message" placeholder="Your message"/>
+                </div>
+                <button class="popular-request">Submit</button>
+            </div>
+            
+        </div>
+        <div class="details-section-image">
+            <img src="./Assets/Icons/Food delivery illustration.svg"/>
+        </div>
+    </section>
+    <header>
+        <div class="header-title">JTGeats</div>
+        <div class="header-links">
+            <ul class="header-mid">
+                <li class="header-mid-li">Home</li>
+                <li class="header-mid-li">About</li>
+                <li class="header-mid-li">Menu</li>
+                <li class="header-mid-li">Blog</li>
+                <li class="header-mid-li">Content</li>
+            </ul>
+        </div>
+        <div class="header-options">
+            <img class="header-options-icon" src="./Assets/Icons/Facebook.svg" alt="">
+            <img class="header-options-icon" src="./Assets/Icons/instagram.svg" alt="">            
+        </div>
+        
+    </header>
+    <div class="footerline" style="clear:both;width:80%; margin:auto; position:relative; top:-15px; border:0.5px solid white;">
+
+        </div>
+<div class="overlay hidden"></div>
+<script src="./index.js"></script>
+</body>
+</html>
